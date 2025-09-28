@@ -161,3 +161,4 @@ function filterDestinations() {
   noResults.style.display = anyVisible ? "none" : "block";
 }
 
+
