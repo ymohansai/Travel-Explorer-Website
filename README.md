@@ -1,99 +1,67 @@
-Travel Explorer – Andhra Pradesh Edition
+🌏 Travel Explorer – Andhra Pradesh
+✨ Overview
 
-Planning a trip can be overwhelming without easy access to destination info. This project offers a clean, interactive interface to explore top destinations in Andhra Pradesh, view photos, check maps, and see important details. It simplifies trip planning for users.
+Planning a trip can be overwhelming without easy access to destination information. Travel Explorer offers a clean, interactive interface to explore the top destinations in Andhra Pradesh. Users can view photos, check details, explore nearby attractions, and open maps for directions. It simplifies trip planning and makes discovering destinations engaging and convenient.
 
-Features
+🚩 Features
 
-Browse Popular Destinations – Explore Tirupati, Araku Valley, Vizag Beach, and more.
+🗺 Explore Popular Destinations – Tirupati, Araku Valley, Vizag, and more.
 
-View Details – Click “View Details” on any destination to see:
+➕ View More Places – Load additional destinations dynamically.
 
-Location
+🔍 Search Functionality – Quickly find any destination.
 
-Timings
+📌 Destination Details – Location, timings, entry fees, ratings, best time to visit, nearby attractions.
 
-Entry fee
+🗺 Embedded Google Maps – Navigate directly to the destination.
 
-Ratings
+📱 Responsive Design – Works on desktop, tablet, and mobile devices.
 
-Best time to visit
+❌ Close All / Reset – Hide all details and reset the search.
 
-Nearby attractions
+✅ Duplicate Prevention – Ensures search results do not repeat.
 
-View More Places – Dynamically load additional destinations like Srisailam, Amaravathi, Ramanarayanam, Rajahmundry.
+💻 Technologies Used
 
-Search Destinations – Search bar filters both default and added destinations in real-time.
+HTML – Structured the website layout and content.
 
-Close All Button – Hide all destinations, reset search, and restore initial state.
+CSS – Designed a clean, modern, responsive UI.
 
-Embedded Maps – Each destination includes a Google Maps iframe for quick navigation.
+JavaScript – Added interactivity, dynamic content, and search functionality.
 
-Responsive Design – Works seamlessly on desktop, tablet, and mobile devices.
+Google Maps Embed – Provides interactive maps for each destination.
 
-No Duplicates – Prevents duplicate entries when using “View More” or searching after adding destinations.
+🛠 How to Use
 
-No Results Handling – Displays “No results found” if the search doesn’t match any destination.
+Open the website: Travel Explorer – Andhra Pradesh
 
-Technologies Used
+Browse the destinations on the homepage.
 
-HTML5
+Click View Details for timings, ratings, and nearby attractions.
 
-CSS3
+Click View More Places to load additional destinations.
 
-JavaScript (Vanilla JS)
+Use the search bar 🔍 to find a destination quickly.
 
-Google Maps Embed API
+Click Close All ❌ to hide details and reset the view.
 
-Installation / Usage
-
-Clone the repository:
-
-git clone https://github.com/ymohansai/Travel-Explorer-Website.git
-
-
-Navigate to the project folder:
-
-cd Travel-Explorer-Website
-
-
-Open index.html in your browser or deploy on GitHub Pages.
-
-GitHub Pages link:
-https://ymohansai.github.io/Travel-Explorer-Website/
-
-File Structure
+📁 Project Structure
 Travel-Explorer-Website/
 │
-├── index.html        # Main HTML page
-├── style.css         # Styling for layout and responsiveness
-├── script.js         # JavaScript for interactivity (search, view details, view more)
-├── images/           # All destination images
-└── README.md         # Project overview and instructions
+├─ index.html         # Main HTML file
+├─ style.css          # Styles for cards, header, buttons, and responsive layout
+├─ script.js          # JS for dynamic content, search, and map integration
+├─ Images/            # Destination images (Tirupati_pic.png, araku_pic.png, etc.)
+└─ README.md          # Project documentation
 
-How to Use
+🚀 Future Improvements
 
-Search – Type in the search bar to filter destinations by name.
+🌤 Weather Integration – Display real-time weather for destinations.
 
-View Details – Click a destination’s “View Details” button to see detailed info and nearby attractions.
+🏨 Booking Links – Add hotel or travel booking options.
 
-View More Places – Click the button to dynamically load additional destinations.
+⭐ User Reviews – Enable ratings and comments from users.
 
-Close All – Click the “Close All” button to reset the page and hide all cards.
+👤 Credits
 
-Screenshots
-
-(Add screenshots here of desktop, tablet, and mobile views for better documentation.)
-
-Future Enhancements
-
-Include live weather API for each destination.
-
-Add booking or contact links for hotels/tours.
-
-Add ratings and user reviews functionality.
-
-Add animated transitions for cards and map popups.
-
-Author
-
-Y Mohan Sai – GitHub Profile
+Developed by Y Mohan Sai – A personal project to simplify trip planning in Andhra Pradesh.
