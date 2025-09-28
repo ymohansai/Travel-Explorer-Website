@@ -178,3 +178,23 @@ header {
     font-size: 14px;
   }
 }
+/* Existing styles unchanged */
+
+.view-more, .close-all {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.close-all button {
+  background: #cc0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.close-all button:hover {
+  background: #990000;
+}
+
