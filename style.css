@@ -9,7 +9,11 @@ header {
   text-align: center;
   background: #0077cc;
   color: white;
-  padding: 20px;
+  padding: 50px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  background-image: url("Screenshot.png");
+  background-size: cover;
+  background-position: center;
 }
 
 header input {
@@ -39,7 +43,8 @@ header input {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
@@ -65,10 +70,12 @@ header input {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .card-content button:hover {
-  background: #003d80;
+  background: #004080;
+  transform: scale(1.05);
 }
 
 .info {
@@ -85,16 +92,19 @@ header input {
   margin: 20px 0;
 }
 
-.view-more button {
+.view-more button,
+#closeAllPlaceholder button {
   background: #0077cc;
   color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
-.view-more button:hover {
+.view-more button:hover,
+#closeAllPlaceholder button:hover {
   background: #005fa3;
 }
 
@@ -104,6 +114,7 @@ footer {
   color: white;
   padding: 10px;
 }
+
 .map-box {
   margin-top: 20px;
   padding: 15px;
@@ -119,17 +130,11 @@ footer {
   border-radius: 10px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
+
 h2{
     text-align:center;
 }
-header {
-  background-image: url("Screenshot.png");
-  background-size: cover;
-  background-position: center;
-  color: white;
-  padding: 50px;
-  text-align: center;
-}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .tour-cards {
@@ -159,7 +164,8 @@ header {
   header p {
     font-size: 16px;
   }
-  .view-more button {
+  .view-more button,
+  #closeAllPlaceholder button {
     width: 90%;
   }
   .card-content h3 {
@@ -169,26 +175,3 @@ header {
     font-size: 14px;
   }
 }
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.card-content button {
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.card-content button:hover {
-  background: #004080;
-  transform: scale(1.05);
-}
-
-header {
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
-}
-.highlight {
-  background: yellow;
-  font-weight: bold;
-}
-
-
