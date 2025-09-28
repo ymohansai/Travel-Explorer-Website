@@ -66,21 +66,22 @@ function showDetails(place) {
     `
   };
 
-  document.getElementById("details").innerHTML = details[place] || `<p>Details not available.</p>`;
+  document.getElementById("details").innerHTML =
+    details[place] || `<p>Details not available.</p>`;
 }
 
 // Add more places dynamically
 function addMorePlaces() {
   const tourCards = document.getElementById("tourCards");
 
-  if (tourCards.dataset.added === "true") return; // prevent duplicates
-  tourCards.dataset.added = "true";
+  // Prevent adding multiple times
+  if (document.getElementById("addedMore")) return;
 
   const morePlaces = [
-    { img: "Ramanarayanam_pic.png", title: "Sri Ramanarayanam Temple", price: "Starting @ Rs.2,999/- (upto 4 travelers)", id: "ramanarayanam", map: "https://www.google.com/maps/embed?..."},
-    { img: "rajahmundry_pic.png", title: "Rajahmundry Tour", price: "Starting @ Rs.3,499/- (upto 4 travelers)", id: "rajahmundry", map: "https://www.google.com/maps/embed?..."},
-    { img: "Srisailam_pic.jpg", title: "Srisailam Temple", price: "Starting @ Rs.2,799/- (upto 4 travelers)", id: "srisailam", map: "https://www.google.com/maps/embed?..."},
-    { img: "amaravathi_pic.png", title: "Amaravathi The Capital Andhra Pradesh", price: "Starting @ Rs.3,299/- (upto 4 travelers)", id: "amaravathi", map: "https://www.google.com/maps/embed?..."}
+    { img: "Ramanarayanam_pic.png", title: "Sri Ramanarayanam Temple", price: "Starting @ Rs.2,999/- (upto 4 travelers)", id: "ramanarayanam", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3792.928328439355!2d83.36694687464203!3d18.07487238263777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3be4529f3f7b59%3A0xe795db3c80483f66!2sRamanarayanam!5e0!3m2!1sen!2sin!4v1759063603014!5m2!1sen!2sin"},
+    { img: "rajahmundry_pic.png", title: "Rajahmundry Tour", price: "Starting @ Rs.3,499/- (upto 4 travelers)", id: "rajahmundry", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122103.63512846752!2d81.6504569527932!3d16.98740364167963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37a3f2440c9fff%3A0x86b24503e305ca21!2sRajamahendravaram%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1759063518790!5m2!1sen!2sin"},
+    { img: "Srisailam_pic.jpg", title: "Srisailam Temple", price: "Starting @ Rs.2,799/- (upto 4 travelers)", id: "srisailam", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8319985010594!2d78.8633283766308!3d16.07420549963745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb56500661e22c5%3A0x9b3bf8b59610194b!2sSrisailam%20temple!5e0!3m2!1sen!2sin!4v1759063374991!5m2!1sen!2sin"},
+    { img: "Amaravathi_pic.png", title: "Amaravathi The Capital Andhra Pradesh", price: "Starting @ Rs.3,299/- (upto 4 travelers)", id: "amaravathi", map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d244841.44484775283!2d80.19334065176706!3d16.49337343057491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a35ed0b183aea1b%3A0x11d318810e9c92c2!2sAmaravati%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1759063692999!5m2!1sen!2sin"}
   ];
 
   morePlaces.forEach(place => {
@@ -100,27 +101,31 @@ function addMorePlaces() {
     tourCards.appendChild(card);
   });
 
-  // Add "Close All" button
-  if (!document.getElementById("closeAllBtn")) {
-    const closeBtn = document.createElement("button");
-    closeBtn.id = "closeAllBtn";
-    closeBtn.innerText = "Close All";
-    closeBtn.style.margin = "20px auto";
-    closeBtn.style.display = "block";
-    closeBtn.onclick = () => {
-      // Remove all dynamically added cards
-      morePlaces.forEach((_, index) => tourCards.lastChild.remove());
-      tourCards.dataset.added = "false";
-      document.getElementById("closeAllBtn").remove();
-      document.querySelector(".view-more").style.display = "block";
-    };
-    document.querySelector(".view-more").parentNode.appendChild(closeBtn);
-  }
+  // Mark added
+  tourCards.id = "addedMore";
 
+  // Hide "View More" button
   document.querySelector(".view-more").style.display = "none";
+
+  // Add Close All button
+  const closeBtn = document.createElement("div");
+  closeBtn.style.textAlign = "center";
+  closeBtn.innerHTML = `<button id="closeAllBtn">Close All</button>`;
+  document.querySelector("section").appendChild(closeBtn);
+
+  document.getElementById("closeAllBtn").onclick = () => {
+    // Remove the dynamically added cards
+    morePlaces.forEach((_, i) => tourCards.removeChild(tourCards.lastChild));
+    // Show "View More" button again
+    document.querySelector(".view-more").style.display = "block";
+    // Remove Close All button
+    closeBtn.remove();
+    // Reset ID so more can be added again
+    tourCards.id = "tourCards";
+  };
 }
 
-// Filter destinations
+// Filter destinations with no duplicates
 function filterDestinations() {
   const input = document.getElementById("search").value.toLowerCase();
   const cards = document.querySelectorAll(".card");
@@ -149,13 +154,4 @@ function filterDestinations() {
 
   noResults.style.display = anyVisible ? "none" : "block";
 }
-
-
-
-
-
-
-
-
-
 
