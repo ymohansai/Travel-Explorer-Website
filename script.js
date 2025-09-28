@@ -97,7 +97,7 @@ function addMorePlaces() {
       map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8319985010594!2d78.8633283766308!3d16.07420549963745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb56500661e22c5%3A0x9b3bf8b59610194b!2sSrisailam%20temple!5e0!3m2!1sen!2sin!4v1759063374991!5m2!1sen!2sin"
     },
     {
-      img: "amaravathi_pic.png",
+      img: "Amaravathi_pic.png",
       title: "Amaravathi The Capital Andhra Pradesh",
       price: "Starting @ Rs.3,299/- (upto 4 travelers)",
       id: "amaravathi",
@@ -160,3 +160,4 @@ function filterDestinations() {
 
   noResults.style.display = anyVisible ? "none" : "block";
 }
+
