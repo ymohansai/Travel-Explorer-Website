@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Explorer – Andhra Pradesh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌏 Travel Explorer – Andhra Pradesh</h1>
+    <p>Discover Andhra Pradesh’s top destinations with prices, details & weather.</p>
+  </header>
+
+  <!-- 🔎 Search Bar -->
+  <section class="search-section">
+    <input type="text" id="searchBar" placeholder="Search for destinations...">
+  </section>
+
+  <!-- 🏞️ Popular Destinations -->
+  <section id="destinations">
+    <h2>🌏 Popular Destinations</h2>
+    <div class="card-container" id="cardContainer">
+      <!-- Default Cards -->
+      <div class="card">
+        <img src="assets/araku.png" alt="Araku">
+        <div class="card-content">
+          <h3>Araku Valley & Borra Caves</h3>
+          <p>Starting @ Rs.6,499/- (upto 4 travelers)</p>
+          <button onclick="showDetails('araku')">View Details</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/tirupati.png" alt="Tirupati">
+        <div class="card-content">
+          <h3>Tirupati Temple</h3>
+          <p>Starting @ Rs.4,999/- (upto 3 travelers)</p>
+          <button onclick="showDetails('tirupati')">View Details</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/rajahmundry.png" alt="Rajahmundry">
+        <div class="card-content">
+          <h3>Rajahmundry</h3>
+          <p>Starting @ Rs.3,499/- (upto 2 travelers)</p>
+          <button onclick="showDetails('rajahmundry')">View Details</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🚀 Single Toggle Button -->
+    <div class="button-group">
+      <button id="toggleMoreBtn">View More Places</button>
+    </div>
+
+    <p id="noResults" style="display:none;">❌ No results found.</p>
+  </section>
+
+  <!-- 📌 Destination Info -->
+  <section id="destination-info">
+    <h2>📌 Destination Info</h2>
+    <div id="detailsBox">
+      <p>Click "View Details" on any destination to see more information here.</p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
