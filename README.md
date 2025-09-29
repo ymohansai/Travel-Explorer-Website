@@ -35,6 +35,7 @@ Embedded Google Map.
 Works well on desktops, tablets, and mobile devices.
 
 📂 File Structure
+
 /Travel-Explorer-Website
 │
 ├── index.html         # Main HTML page
