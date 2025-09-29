@@ -1,8 +1,8 @@
 // Keep track of extra cards state
 let extraVisible = false;
-let extraCards = []; // will hold DOM nodes for removal later
+let extraCards = [];
 
-// Detailed info with maps included
+// Destination info + maps
 function showDetails(place) {
   const details = {
     tirupati: {
@@ -114,7 +114,7 @@ function toggleMorePlaces() {
       { img: "Ramanarayanam_pic.png", title: "Sri Ramanarayanam Temple", price: "Starting @ Rs.2,999/- (upto 4 travelers)", id: "ramanarayanam" },
       { img: "rajahmundry_pic.png", title: "Rajahmundry Tour", price: "Starting @ Rs.3,499/- (upto 4 travelers)", id: "rajahmundry" },
       { img: "Srisailam_pic.jpg", title: "Srisailam Temple", price: "Starting @ Rs.2,799/- (upto 4 travelers)", id: "srisailam" },
-      { img: "Amaravathi_pic.png", title: "Amaravathi The Capital Andhra Pradesh", price: "Starting @ Rs.3,299/- (upto 4 travelers)", id: "amaravathi" }
+      { img: "amaravathi_pic.png", title: "Amaravathi The Capital Andhra Pradesh", price: "Starting @ Rs.3,299/- (upto 4 travelers)", id: "amaravathi" }
     ];
 
     morePlaces.forEach(place => {
@@ -143,7 +143,7 @@ function toggleMorePlaces() {
   }
 }
 
-// Filter function
+// Filter cards
 function filterDestinations() {
   const input = document.getElementById("search").value.toLowerCase().trim();
   const cards = document.querySelectorAll(".card");
@@ -178,9 +178,3 @@ function filterDestinations() {
     if (noResults) noResults.style.display = "none";
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("viewMoreBtn");
-  if (btn) btn.onclick = toggleMorePlaces;
-});
-
