@@ -1,27 +1,42 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Travel Explorer – Andhra Pradesh</title>
+  <title>Travel Explorer - Andhra Pradesh</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>🌏 Travel Explorer – Andhra Pradesh</h1>
+    <h1>Travel Explorer – Andhra Pradesh</h1>
     <p>Discover Andhra Pradesh’s top destinations with prices, details & weather.</p>
+    <input type="text" id="search" placeholder="Search destinations..." onkeyup="filterDestinations()">
   </header>
 
-  <!-- 🔎 Search Bar -->
-  <section class="search-section">
-    <input type="text" id="searchBar" placeholder="Search for destinations...">
-  </section>
-
-  <!-- 🏞️ Popular Destinations -->
-  <section id="destinations">
+  <!-- Tour Cards Section -->
+  <section>
     <h2>🌏 Popular Destinations</h2>
-    <div class="card-container" id="cardContainer">
-      <!-- Default Cards -->
+    <div class="tour-cards" id="tourCards">
+
+      <!-- Tirupati -->
+      <div class="card">
+        <img src="Tirupathi_pic.png" alt="Tirupati">
+        <div class="card-content">
+          <h3>Tirupati Darshan Tour</h3>
+          <p>Starting @ Rs.3,500/- (upto 4 travelers)</p>
+          <button onclick="showDetails('tirupati')">View Details</button>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31012.851257522085!2d79.32588072799639!3d13.68168074719857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb2b562cc4e1291%3A0x85a1996b4b87bcf6!2sTirumala%2C%20Tirupati%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1759063836445!5m2!1sen!2sin"
+           width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Araku -->
       <div class="card">
         <img src="araku_pic.png" alt="Araku">
         <div class="card-content">
@@ -29,45 +44,46 @@
           <p>Starting @ Rs.6,499/- (upto 4 travelers)</p>
           <button onclick="showDetails('araku')">View Details</button>
         </div>
-      </div>
-
-      <div class="card">
-        <img src="Tirupati_pic.png" alt="Tirupati">
-        <div class="card-content">
-          <h3>Tirupati Temple</h3>
-          <p>Starting @ Rs.4,999/- (upto 3 travelers)</p>
-          <button onclick="showDetails('tirupati')">View Details</button>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15219.678905417756!2d82.9862!3d18.3331!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4e9b6d5e7b1234%3A0xabcd1234567890ef!2sAraku%20Valley%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1759055000000!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
 
+      <!-- Vizag -->
       <div class="card">
-        <img src="rajahmundry_pic.png" alt="Rajahmundry">
+        <img src="vizag_pic.png" alt="Vizag">
         <div class="card-content">
-          <h3>Rajahmundry</h3>
-          <p>Starting @ Rs.3,499/- (upto 2 travelers)</p>
-          <button onclick="showDetails('rajahmundry')">View Details</button>
+          <h3>Vizag Beach Tour</h3>
+          <p>Starting @ Rs.3,299/- (upto 4 travelers)</p>
+          <button onclick="showDetails('vizag')">View Details</button>
+        </div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15220.123456789!2d83.2185!3d17.6868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394ed7890abcde%3A0xfedcba9876543210!2sVisakhapatnam%20Beach%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1759056000000!5m2!1sen!2sin"
+            allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
+
     </div>
 
-    <!-- 🚀 Single Toggle Button -->
-    <div class="button-group">
-      <button id="toggleMoreBtn">View More Places</button>
+    <!-- View More / View Less toggle button (no Close All) -->
+    <div class="view-more">
+      <button id="viewMoreBtn" onclick="toggleMorePlaces()">View More Places</button>
     </div>
-
-    <p id="noResults" style="display:none;">❌ No results found.</p>
   </section>
 
-  <!-- 📌 Destination Info -->
-  <section id="destination-info">
+  <!-- Destination Info -->
+  <section class="info">
     <h2>📌 Destination Info</h2>
-    <div id="detailsBox">
+    <div id="details">
       <p>Click "View Details" on any destination to see more information here.</p>
     </div>
   </section>
 
+  <footer>
+    © 2025 Travel Explorer | Andhra Pradesh Edition
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
-
