@@ -67,7 +67,7 @@ const defaultCards = `
   </div>
 
   <div class="card">
-    <img src="tirupati_pic.png" alt="Tirupati">
+    <img src="Tirupati_pic.png" alt="Tirupati">
     <div class="card-content">
       <h3>Tirupati Temple</h3>
       <p>Starting @ Rs.4,999/- (upto 3 travelers)</p>
@@ -135,4 +135,5 @@ document.getElementById("searchBar").addEventListener("input", function () {
 
   document.getElementById("noResults").style.display = found ? "none" : "block";
 });
+
 
