@@ -32,7 +32,7 @@ function showDetails(place) {
     vizag: {
       info: `
         <h3>🌊 Vizag Beach Tour</h3>
-        <p>📍 Location: Visakhapatnam</p>
+        <p>📍 Location: Visakhapatnam District</p>
         <p>⏱ Timings: Open 24 hours</p>
         <p>💰 Entry Fee: Free</p>
         <p>⭐ Rating: 4.5/5</p>
@@ -44,7 +44,7 @@ function showDetails(place) {
     ramanarayanam: {
       info: `
         <h3>🛕 Sri Ramanarayanam Temple</h3>
-        <p>📍 Location: Vizianagaram</p>
+        <p>📍 Location: Vizianagaram District</p>
         <p>⏱ Timings: 8:00 am – 8:00 pm</p>
         <p>💰 Entry Fee: Free</p>
         <p>⭐ Rating: 4.6/5</p>
@@ -178,3 +178,4 @@ document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("viewMoreBtn");
   if (btn) btn.onclick = toggleMorePlaces;
 });
+
