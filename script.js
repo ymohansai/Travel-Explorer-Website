@@ -20,7 +20,7 @@ function showDetails(place) {
     araku: {
       info: `
         <h3>🏞 Araku Valley & Borra Caves</h3>
-        <p>📍 Location: District</p>
+        <p>📍 Location: Alluri Sitharama Raju District</p>
         <p>⏱ Timings: 6:00 am – 6:00 pm</p>
         <p>💰 Entry Fee: Borra Caves: ₹50 approx</p>
         <p>⭐ Rating: 4.6/5</p>
@@ -178,6 +178,7 @@ function filterDestinations() {
     if (noResults) noResults.style.display = "none";
   }
 }
+
 
 
 
