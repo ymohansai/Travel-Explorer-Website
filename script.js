@@ -20,7 +20,7 @@ function showDetails(place) {
     araku: {
       info: `
         <h3>🏞 Araku Valley & Borra Caves</h3>
-        <p>📍 Location: Visakhapatnam District</p>
+        <p>📍 Location: Alluri Sitharama Raju District</p>
         <p>⏱ Timings: 6:00 am – 6:00 pm</p>
         <p>💰 Entry Fee: Borra Caves: ₹50 approx</p>
         <p>⭐ Rating: 4.6/5</p>
@@ -114,7 +114,7 @@ function toggleMorePlaces() {
       { img: "Ramanarayanam_pic.png", title: "Sri Ramanarayanam Temple", price: "Starting @ Rs.2,999/- (upto 4 travelers)", id: "ramanarayanam" },
       { img: "rajahmundry_pic.png", title: "Rajahmundry Tour", price: "Starting @ Rs.3,499/- (upto 4 travelers)", id: "rajahmundry" },
       { img: "Srisailam_pic.jpg", title: "Srisailam Temple", price: "Starting @ Rs.2,799/- (upto 4 travelers)", id: "srisailam" },
-      { img: "amaravathi_pic.png", title: "Amaravathi The Capital Andhra Pradesh", price: "Starting @ Rs.3,299/- (upto 4 travelers)", id: "amaravathi" }
+      { img: "Amaravathi_pic.png", title: "Amaravathi The Capital Andhra Pradesh", price: "Starting @ Rs.3,299/- (upto 4 travelers)", id: "amaravathi" }
     ];
 
     morePlaces.forEach(place => {
@@ -178,3 +178,4 @@ function filterDestinations() {
     if (noResults) noResults.style.display = "none";
   }
 }
+
