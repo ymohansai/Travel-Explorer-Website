@@ -58,7 +58,7 @@ function showDetails(place) {
 // Default cards HTML
 const defaultCards = `
   <div class="card">
-    <img src="assets/araku.png" alt="Araku">
+    <img src="araku_pic.png" alt="Araku">
     <div class="card-content">
       <h3>Araku Valley & Borra Caves</h3>
       <p>Starting @ Rs.6,499/- (upto 4 travelers)</p>
@@ -67,7 +67,7 @@ const defaultCards = `
   </div>
 
   <div class="card">
-    <img src="assets/tirupati.png" alt="Tirupati">
+    <img src="tirupati_pic.png" alt="Tirupati">
     <div class="card-content">
       <h3>Tirupati Temple</h3>
       <p>Starting @ Rs.4,999/- (upto 3 travelers)</p>
@@ -76,7 +76,7 @@ const defaultCards = `
   </div>
 
   <div class="card">
-    <img src="assets/rajahmundry.png" alt="Rajahmundry">
+    <img src="rajahmundry_pic.png" alt="Rajahmundry">
     <div class="card-content">
       <h3>Rajahmundry</h3>
       <p>Starting @ Rs.3,499/- (upto 2 travelers)</p>
@@ -87,9 +87,9 @@ const defaultCards = `
 
 // Extra cards
 const extraPlaces = [
-  { name: "Srisailam Temple", img: "assets/srisailam.png", key: "srisailam" },
-  { name: "Sri Ramanarayanam Temple", img: "assets/ramanarayanam.png", key: "ramanarayanam" },
-  { name: "Amaravathi", img: "assets/amaravathi.png", key: "amaravathi" }
+  { name: "Srisailam Temple", img: "srisailam_pic.png", key: "srisailam" },
+  { name: "Sri Ramanarayanam Temple", img: "ramanarayanam_pic.png", key: "ramanarayanam" },
+  { name: "Amaravathi", img: "Amaravathi_pic.png", key: "amaravathi" }
 ];
 
 // Toggle View More / View Less
@@ -135,3 +135,4 @@ document.getElementById("searchBar").addEventListener("input", function () {
 
   document.getElementById("noResults").style.display = found ? "none" : "block";
 });
+
